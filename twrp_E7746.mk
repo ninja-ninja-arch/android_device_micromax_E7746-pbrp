@@ -23,14 +23,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/pb/config/common.mk)
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(DEVICE_PATH)/recovery/root,recovery/root) \
     $(DEVICE_PATH)/prebuilt/dtb:dtb.img
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := E7746
-PRODUCT_NAME := omni_E7746
+PRODUCT_NAME := twrp_E7746
 PRODUCT_BRAND := Micromax
 PRODUCT_MODEL := IN Note 1
 PRODUCT_MANUFACTURER := Micromax
